@@ -1,0 +1,78 @@
+OnboardAI
+Revolutionizing Employee Onboarding with Artificial Intelligence
+Presenters: [Your Team Name]
+The Challenge with Traditional Onboarding
+Time-Consuming: Manual guide creation drains HR and management time.
+Inconsistent & Generic: Different formats; lacks role-specific personalization.
+Quickly Outdated: Static documents lose relevance fast.
+Poor Employee Experience: Delays productivity and creates confusion.
+Zero Visibility: Managers struggle to track actual onboarding progress.
+Introducing OnboardAI
+Automated Generation: Creates role-specific guides in seconds.
+Highly Personalized: Tailored to exact roles, departments, and culture.
+Interactive: Replaces static PDFs with trackable checklists.
+24/7 Support: Integrated AI Chat Assistant for instant help.
+What We Aim to Achieve
+Reduce Time & Effort: Cut down hours spent drafting onboarding docs.
+Standardize Quality: Ensure every employee gets a consistent welcome.
+Personalize the Journey: Deliver custom content for specific roles.
+Enable Tracking: Transform onboarding into an interactive workflow.
+Simplify Management: Make the process frictionless for HR and managers.
+Core Features & Capabilities
+AI Guide Generation: Powered by LLaMA 3.1 for structured content.
+Multi-Step Dynamic Form: Captures role, tools, work mode, and culture.
+Interactive Checklists: Converts static sections into trackable tasks.
+Real-Time AI Chat: Context-aware assistant to answer questions.
+Visual Timelines: Breaks onboarding down by Day 1, Week 1, Month 1.
+Manager Dashboard: Centralized view of all guides and progress.
+Our Tech Stack
+Frontend: React.js, Vite, Tailwind CSS, Framer Motion
+Backend: Node.js, Express.js
+Database: MongoDB
+AI / LLMs: LLaMA 3.1 (via Groq API & NVIDIA NIM API)
+Tools & Auth: JWT Auth, Axios, React Markdown, html2pdf.js
+How It Works (Architecture)
+1. User submits details via the frontend form.
+2. Backend engineers a prompt and queries the AI.
+3. AI returns a structured guide, saved directly to MongoDB.
+4. User interacts via tracking, chatting, or exporting.
+Step-by-Step User Journey
+Login/Signup: Secure access to the platform.
+Data Entry: Fill out the intuitive onboarding detail form.
+Generation: AI processes request and builds the custom guide.
+Review & Save: Guide is transformed into interactive tools.
+Engagement: Employee tracks tasks and chats with AI.
+Tracking & Export: Managers monitor progress; guides can be exported as PDFs.
+APIs and Data Management
+Groq API: Primary, lightning-fast AI provider.
+NVIDIA NIM API: Robust fallback provider for high availability.
+Web Speech API: Enables seamless voice input for form filling.
+Data Structures Used:
+Arrays for managing tool lists, checklists, and chat histories.
+MongoDB Documents for persistent storage of accounts and guides.
+Project Modularity
+Frontend Modules:
+Landing Page & Auth (Login/Signup)
+Multi-step Onboarding Form
+Interactive Guide View & Templates
+Backend Modules:
+JWT Authentication Module
+AI Guide Generation Engine
+Database Storage Module
+Why This Matters (Impact)
+Massive Time Savings: Eliminates manual drafting effort.
+Superior Consistency: Every new hire gets the same high standard.
+Faster Time-to-Productivity: Employees get up to speed quicker.
+Reduced HR Burden: AI handles repetitive questions instantly.
+Better Visibility: Managers know exactly where new hires are in the process.
+What's Next for OnboardAI?
+Multi-Language Support: For global teams.
+Real-Time Collaboration: Allowing managers to co-edit guides live.
+Ecosystem Integration: Syncing with Google Calendar and HR software.
+Advanced Analytics: Deeper insights into onboarding bottlenecks.
+White-Labeling: Custom branding options for different enterprises.
+Conclusion
+OnboardAI is a smart, practical solution for the modern workplace.
+We combine AI automation, interactive tracking, and real-time assistance.
+We transform onboarding from an administrative chore into an engaging experience.
+Thank You! (Open for Questions & Demo)

@@ -1,0 +1,232 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: #020617;
+    color: #f1f5f9;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0f172a;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+  }
+}
+
+@layer components {
+  /* Glass Card Effect */
+  .glass-card {
+    @apply bg-surface-900/50 backdrop-blur-xl border border-surface-700/50 rounded-2xl;
+  }
+
+  .glass-card-hover {
+    @apply glass-card transition-all duration-300 hover:border-primary-500/30 hover:shadow-lg hover:shadow-primary-500/10;
+  }
+
+  /* Gradient Text */
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-400 via-purple-400 to-pink-400;
+  }
+
+  /* Input Styles */
+  .input-field {
+    @apply w-full px-4 py-3 bg-surface-800/50 border border-surface-600/50 rounded-xl text-surface-100
+           placeholder:text-surface-500 focus:outline-none focus:ring-2 focus:ring-primary-500/50 
+           focus:border-primary-500/50 transition-all duration-200;
+  }
+
+  .input-label {
+    @apply block text-sm font-medium text-surface-300 mb-2;
+  }
+
+  /* Button Variants */
+  .btn-primary {
+    @apply px-6 py-3 bg-gradient-to-r from-primary-600 to-primary-500 text-white font-semibold rounded-xl
+           hover:from-primary-500 hover:to-primary-400 active:scale-[0.98] transition-all duration-200
+           shadow-lg shadow-primary-500/25 hover:shadow-xl hover:shadow-primary-500/30
+           disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-surface-800 text-surface-200 font-semibold rounded-xl border border-surface-600/50
+           hover:bg-surface-700 hover:border-surface-500/50 active:scale-[0.98] transition-all duration-200
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-ghost {
+    @apply px-4 py-2 text-surface-400 font-medium rounded-xl
+           hover:bg-surface-800/50 hover:text-surface-200 active:scale-[0.98] transition-all duration-200;
+  }
+
+  .btn-danger {
+    @apply px-4 py-2 bg-red-500/10 text-red-400 font-medium rounded-xl border border-red-500/20
+           hover:bg-red-500/20 hover:border-red-500/30 active:scale-[0.98] transition-all duration-200;
+  }
+
+  /* Markdown Content Styles */
+  .markdown-content {
+    @apply text-surface-200 leading-relaxed;
+  }
+
+  .markdown-content h1 {
+    @apply text-3xl font-bold text-white mt-8 mb-4 pb-3 border-b border-surface-700/50;
+  }
+
+  .markdown-content h2 {
+    @apply text-2xl font-bold text-white mt-8 mb-3 pb-2 border-b border-surface-800/50;
+  }
+
+  .markdown-content h3 {
+    @apply text-xl font-semibold text-surface-100 mt-6 mb-2;
+  }
+
+  .markdown-content h4 {
+    @apply text-lg font-semibold text-surface-200 mt-4 mb-2;
+  }
+
+  .markdown-content p {
+    @apply mb-4 text-surface-300 leading-7;
+  }
+
+  .markdown-content ul {
+    @apply mb-4 ml-6 space-y-1;
+  }
+
+  .markdown-content ul li {
+    @apply text-surface-300 list-disc;
+  }
+
+  .markdown-content ol {
+    @apply mb-4 ml-6 space-y-1;
+  }
+
+  .markdown-content ol li {
+    @apply text-surface-300 list-decimal;
+  }
+
+  .markdown-content blockquote {
+    @apply border-l-4 border-primary-500 pl-4 py-2 my-4 bg-primary-500/5 rounded-r-lg italic text-surface-400;
+  }
+
+  .markdown-content code {
+    @apply bg-surface-800 text-primary-300 px-1.5 py-0.5 rounded text-sm font-mono;
+  }
+
+  .markdown-content pre {
+    @apply bg-surface-800/80 border border-surface-700/50 rounded-xl p-4 mb-4 overflow-x-auto;
+  }
+
+  .markdown-content pre code {
+    @apply bg-transparent px-0 py-0 text-surface-200;
+  }
+
+  .markdown-content table {
+    @apply w-full mb-4 border-collapse;
+  }
+
+  .markdown-content thead {
+    @apply bg-surface-800/50;
+  }
+
+  .markdown-content th {
+    @apply px-4 py-3 text-left text-sm font-semibold text-surface-200 border border-surface-700/50;
+  }
+
+  .markdown-content td {
+    @apply px-4 py-3 text-sm text-surface-300 border border-surface-700/50;
+  }
+
+  .markdown-content tr:nth-child(even) {
+    @apply bg-surface-800/20;
+  }
+
+  .markdown-content a {
+    @apply text-primary-400 hover:text-primary-300 underline underline-offset-2 transition-colors;
+  }
+
+  .markdown-content hr {
+    @apply my-6 border-surface-700/50;
+  }
+
+  .markdown-content input[type='checkbox'] {
+    @apply mr-2 accent-primary-500;
+  }
+
+  /* ===== Chat Widget ===== */
+  .chat-messages::-webkit-scrollbar {
+    width: 4px;
+  }
+  .chat-messages::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 2px;
+  }
+
+  /* ===== Timeline ===== */
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* ===== Guide Editor ===== */
+  .guide-editor-textarea {
+    @apply font-mono text-sm leading-relaxed;
+    tab-size: 2;
+  }
+
+  /* ===== Checklist item transitions ===== */
+  .checklist-item {
+    @apply transition-all duration-200;
+  }
+  .checklist-item:hover {
+    @apply bg-surface-800/30;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Animation utilities */
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  /* Smooth scrollbar for all custom scroll areas */
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    @apply bg-surface-600 rounded-full;
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+}
